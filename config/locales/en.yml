@@ -1,0 +1,17 @@
+en:
+  role_menu_title : "Roles Log"
+  label_auditing : "Auditing Project's Members"
+  tb_label_auditing_id : "ID"
+  tb_label_auditing_responsible : "Responsible"
+  tb_label_auditing_project : "Project"
+  tb_label_auditing_membership_type : "Membership Type"
+  tb_label_auditing_member : "Member"
+  tb_label_auditing_role : "Assigned Role (Name and ID)"
+  tb_label_auditing_when : "When"
+  tb_label_admin : "Admin"
+  role_sim : "Yes"
+  role_nao : "No"
+  role_nao_modificado: "Unchanged"
+  role_member_nil: "Not a Member"
+  label_settings_any_loggedin_user_can_read: "Any loggedin user can read the logs"
+
