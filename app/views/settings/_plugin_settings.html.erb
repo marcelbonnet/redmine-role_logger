@@ -1,0 +1,30 @@
+<p>O plugin grava logs de mudanças de usuários em um Projeto. Crie um projeto, o tracker e o papel desse novo projeto. A seguir, selecione-os na tabela abaixo.</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Projeto</th>
+			<th>Tracker</th>
+			<th>Role</th>
+		</tr>
+		<tr>
+			<td>
+				<%= select_tag "project_select", 
+               options_from_collection_for_select(Project.all, "id", "name",settings['project_id']), 
+               name: "settings[project_id]", value: settings['project_id'] %>
+			</td>
+			<td>
+				<%= select_tag "tracker_select", 
+               options_from_collection_for_select(Tracker.all, "id", "name",settings['tracker_id']), 
+               name: "settings[tracker_id]", value: settings['tracker_id'] %>
+
+			</td>
+			<td>
+				<%= select_tag "role_select", 
+               options_from_collection_for_select(Role.all, "id", "name",settings['role_id']), 
+               name: "settings[role_id]", value: settings['role_id'] %>
+
+			</td>
+		</tr>
+	</tbody>
+</table>
