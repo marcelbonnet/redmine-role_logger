@@ -15,8 +15,8 @@ end
 Redmine::Plugin.register :role_logger do
   name 'Role Logger'
   author 'Marcel Bonnet'
-  description 'Logs changes in user\'s roles'
-  version '0.1'
+  description 'Log de mudanças em papéis/role de usários'
+  version '0.2'
   url 'https://github.com/marcelbonnet/redmine-plugin-role-logger'
   author_url 'https://github.com/marcelbonnet/'
 
@@ -29,8 +29,10 @@ Redmine::Plugin.register :role_logger do
 		}
 	end
 
+  settings :default => {'empty' => true}, :partial => 'settings/plugin_settings'
+
   # when enabled as project_module, this route will raise 404
   # menu :top_menu, :role, "/role_logs", :caption => :role_menu_title
   # menu :project_menu, :plugin_example, { :controller => 'example', :action => 'say_hello' }, :caption => 'Sample'
-	menu :project_menu, :role_logger, { :controller => 'role_logs', :action => 'index' } , :caption => :role_menu_title, :after => :activity, :param => :project_id
+	# menu :project_menu, :role_logger, { :controller => 'role_logs', :action => 'index' } , :caption => :role_menu_title, :after => :activity, :param => :project_id
 end
